@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+     <script src="jquery-3.3.1.min.js"></script>
+    <style>
+ 
+@font-face{
+    font-family:berlin;
+    src:url("font/berlin.ttf");
+} 
+@font-face{
+    font-family:berlinBold;
+    src:url("font/berlinBold.ttf");
+} 
+@font-face{
+    font-family:berlinItalic;
+    src:url("font/berlinItalic.ttf");
+} 
+@font-face{
+    font-family:elegantLux;
+    src:url("font/elegantLux.otf");
+} 
+@font-face{
+    font-family:pricedown;
+    src:url("font/pricedown.ttf");
+} 
+@font-face{
+    font-family:smoothElegant;
+    src:url("font/smoothElegant.ttf");
+} 
+@font-face{
+    font-family:quicksandbold;
+    src:url("font/quicksandbold.ttf");
+} 
+@font-face{
+    font-family:quicksandregular;
+    src:url("font/quicksandregular.ttf");
+} 
+@font-face{
+    font-family:quicksandlight;
+    src:url("font/quicksandlight.ttf");
+} 
+
+body{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+*{
+            box-sizing: border-box;
+        } 
+        
+ .certificate{
+    grid-area: certificate;
+    height: 20px;
+    top:80px;
+    z-index: 2;
+    position: sticky;
+    background-color: gray;
+    color:yellow;
+    font-family:quicksandregular;
+}
+
+    </style>
+    </head>
+    <body>
+    
+    <div class="certificate">
+            <span id="certi_text"> Recognised by UGC as a National Publisher.</span>
+           
+        </div>
+ 
+        <script>
+        "WebContent/contactuspage.jsp"
+        $(document).ready(function(){
+            
+            function moveText(){
+    $('#certi_text').animate(
+        {'margin-left':'1000px'},14000,
+        function(){
+            $('#certi_text').css('margin-left','-100px');
+            moveText();
+        });}
+        moveText();
+         
+    $('.certificate').on('mouseenter',function(){
+            $('#certi_text').stop();
+        });
+     $('.certificate').on('mouseleave',function(){
+            moveText();
+        }); 
+            
+        });
+        </script>
+    </body>
+</html>

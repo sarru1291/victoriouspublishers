@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script src="jquery-3.3.1.min.js"></script>
+    <style>
+     
+@font-face{
+    font-family:berlin;
+    src:url("font/berlin.ttf");
+} 
+@font-face{
+    font-family:berlinBold;
+    src:url("font/berlinBold.ttf");
+} 
+@font-face{
+    font-family:elegantLux;
+    src:url("font/elegantLux.otf");
+} 
+@font-face{
+    font-family:pricedown;
+    src:url("font/pricedown.ttf");
+} 
+
+
+body{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+*{
+            box-sizing: border-box;
+        }   
+   nav{
+            grid-area: nav;
+            height: 50px;
+            margin: 0px;
+            padding: 0px;
+            padding-left: 100px;
+           background-color: #353945;
+    display: grid;
+    grid-template-areas: 'home home books books  authors authors aboutus aboutus photos   photos contactus contactus searchbox';    
+        } 
+        .home{
+    grid-area: home;
+}
+.books{
+    grid-area: books;
+}
+.authors{
+grid-area:authors;}
+.aboutus{
+    grid-area: aboutus;
+}
+.photos{
+    grid-area: photos;
+}
+.contactus{
+    grid-area: contactus;
+}
+.searchbox{
+grid-area:searchbox;
+margin-left:100px;
+padding-top:10px;
+padding-bottom:10px;
+}
+
+nav a{
+   background-color:  #353945;
+    color:#b7ad8e;
+    height: 50px;
+    text-decoration: none;
+    text-align: center;
+    padding-top: 15px;    
+}
+
+nav a:hover{
+    background-color: #5294e2;
+    color: white;
+}
+nav a:active{
+background-color: #353945 ;
+color:white;
+}
+#searchinput{
+	border:1.5px solid black;
+	border-radius:2px;
+	height:30px;
+	padding-left:5px;
+	width:250px;
+}
+#searchinput:focus{
+	box-shadow:0px 0px 5px  white;
+	height:30px;
+}
+#searchbutton{
+	background-color:#bfb182;
+	height:30px;
+	border:none;
+	border-radius:2px;
+}
+#searchbutton:hover{
+	background-color:#ebda82;
+}
+#searchbutton:active{
+background-color:#bfb182;}
+
+        </style>
+    </head>
+<body>
+     <nav>
+            
+        <a href="index.jsp" class="home">HOME</a>
+        <a href="allbooks.jsp" class="books">BOOKS</a>
+       <a href="allauthorspage.jsp" >AUTHORS</a>
+        <a href="aboutuspage.jsp" class="aboutus">ABOUT US</a>
+        <a href="photospage.jsp" class="photos">PHOTOS</a>
+        <a href="contactuspage.jsp" class="contactus">CONTACT US</a>   
+    <div class="searchbox"> 
+    <form method="post" action="search.jsp">   
+     <input type="text" id="searchinput" placeholder="Search by author name... "  name="usersearchinput">
+     <input type="submit" value="Search" id="searchbutton">
+     </form>
+     </div>
+        </nav>
+        
+        <script>
+      
+      
+        </script>
+    </body>
+</html>

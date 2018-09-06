@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <script src="jquery-3.3.1.min.js"></script>
+<style>
+@font-face{
+    font-family:berlin;
+    src:url("font/berlin.ttf");
+} 
+    @font-face{
+    font-family:quicksandregular;
+    src:url("font/quicksandegular.ttf");
+} 
+
+@font-face{
+    font-family:elegantLux;
+    src:url("font/elegantLux.otf");
+} 
+
+body{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+*{
+            box-sizing: border-box;
+        }
+.button{
+    border: none;
+     background-color:#353945;  
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    text-align: center;
+    font-family: berlinBold;
+    border-radius: 20px;
+}
+.button:hover{
+   background-color:#353945;  
+    color: white;
+}
+ .subscribe{
+    position: fixed;
+    bottom:-15px;
+    right: 0px;
+    z-index: 3;  
+    background-color:#353945;  
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+#subscribe_text{
+    font-family:quicksandregular;
+    color: white;  
+    letter-spacing:1px;
+   font-size:16px;
+}
+#subscribenow_button{
+    display:none;
+    margin-top: 10px;
+    width: 150px;
+     background-color: #5294e2;
+    color: white;
+}
+#subscribenow_button:hover{
+     background-color:gray; 
+     color:white;
+}   
+    #subscribe_data{
+      display: none; 
+        position: fixed;
+        z-index: 4;
+        top: 170px;
+        left: 400px;
+        height: 230px;
+        width:450px;
+        background-color: #726b67;
+        color:white;
+        padding-left: 20px;
+        padding-bottom:20px;
+        padding-right:20px;
+        font-size:20px;
+        font-family:elegantLux;
+    }
+  #subscribe_data  h2{
+   color:yellow;
+   font-size:30px;}
+    #opacity{
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        opacity: 0.4;
+        position: fixed;
+        display: none;
+        background-color: black;
+    } 
+    #subscribe_data button{
+    background-color:#353945;
+    height:35px;
+    font-family:berlin;
+    letter-spacing:1px;
+    border:none;
+    color:white;
+    }
+    #subscribe_data button:hover{
+    background-color:gray;
+    color:white;
+    }
+    #subscribe_data button:active{
+    background-color:#353945;
+    color:white;
+    }
+    #subscribe_data input{
+    }
+</style>
+</head>
+<body>
+<div class="subscribe">
+    <div id="subscribe_text"><b>Subscribe to our Newsletter</b></div>
+  
+    <button type="submit" class="button" id="subscribenow_button">Subscribe Now</button>
+        </div>
+   
+    <div  id="opacity"></div>
+   
+    <div id="subscribe_data">
+    <h2>   Join Victorious Publishers</h2>
+       Get updates of all latest books and other news
+       of your interest.<br><br>
+     <form action="subscribe.jsp" method="post">
+    <input type="email" placeholder="Enter your Email address" name="email" required autofocus>
+         <button type="submit">Subscribe</button>
+    </form>
+           
+    </div> 
+    <script>
+    $(document).ready(function(){
+        
+       $("#subscribe_text").on({
+              mouseover:function(){
+                  $("#subscribenow_button:hidden").show();
+              }
+          });
+            $(".subscribe").on({
+                mouseleave:function(){
+                    $("#subscribenow_button").hide();
+                }
+            }); 
+        
+        $("#subscribenow_button").click(function(){
+           $("#subscribe_data").show(); 
+           $("#opacity").show(); 
+          
+        });
+        
+        $("#subscribe_data_close,#opacity").click(function(){
+           $("#subscribe_data").hide(); 
+           $("#opacity").hide(); 
+        });
+        
+        
+        
+    });
+    
+    </script>
+</body>
+</html>

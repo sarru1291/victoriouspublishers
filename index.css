@@ -1,0 +1,365 @@
+@charset "UTF-8";
+
+
+@font-face{
+    font-family:berlin;
+    src:url("font/berlin.ttf");
+} 
+@font-face{
+    font-family:berlinBold;
+    src:url("font/berlinBold.ttf");
+} 
+
+@font-face{
+    font-family:elegantLux;
+    src:url("font/elegantLux.otf");
+} 
+
+
+body{
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+        }
+*{
+            box-sizing: border-box;
+        }
+.container{
+            display: grid;
+            width: 100%;
+   height:auto;
+            grid-template-areas: 
+
+                'publish-left-section publish-left-section publish-right-section publish-right-section'
+                'latest-releases-label latest-releases-label latest-releases-label latest-releases-label'
+                
+                'latest-releases-book latest-releases-book latest-releases-book  latest-releases-book'
+                
+                'authors-label authors-label authors-label authors-label'
+                
+                'authors authors authors authors'
+                
+                'all-books-label all-books-label all-books-label all-books-label'
+                
+                'all-books all-books all-books all-books'
+                
+                'category-label category-label category-label category-label'
+                
+                'category category category category'
+                
+                'coming-soon-label coming-soon-label coming-soon-label coming-soon-label'
+                
+                'coming-soon-books coming-soon-books coming-soon-books coming-soon-books'
+                
+                'footer footer footer footer';
+        }
+
+.button{
+    border: none;
+      background-color: #5294e2;
+    color: white;
+    height: 40px;
+    width: 100px;
+    font-size: 18px;
+    text-align: center;
+    font-family: berlinBold;
+    border-radius: 20px;
+}
+.button:hover{
+  background-color:#353945;  
+  color:white;  
+}
+.button:active{
+	background-color:#5294e2;
+	color:white;
+}
+.publish_left_section{
+    grid-area: publish-left-section;
+    text-align: center;
+    height: 300px;
+    padding-left: 40px;
+    padding-right:30px;
+    border-right:1px solid gray;
+   color:#353945;
+   padding:bottom:10px;
+   font-family:elegantLux;
+   background-color:#daf1ff;
+}
+#publish_button{
+	width:300px;
+	font-size:25px;
+	font-family:fantasy;
+}
+.publish_right_section{
+    grid-area: publish-right-section;
+    text-align: center;
+    height: 300px;
+    padding: 30px;
+color:black;
+font-family:elegantLux;
+font-size:19px;
+    background-color: #daf1ff;
+}
+.publish_right_section a{
+text-decoration:underline;
+	color:brown;
+}
+.publish_right_section a:hover{
+	color:black;
+}
+.publish_right_section a:active{
+	color:brown;
+}
+.label_style{
+    height: 50px;
+    justify-self: center;
+    font-size: 30px;
+    font-family: elegantLux; 
+    text-decoration:underline;     
+}
+.latest_releases_label{
+    grid-area: latest-releases-label;
+
+}
+.latest_releases_book{
+    grid-area: latest-releases-book;
+    height: 300px;
+    padding-left: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px; 
+    padding-right: 200px;
+    display: grid;
+    grid-template-areas: 'backward-button-latest latest-books1 latest-books2 latest-books3 latest-books4  forward-button-latest'
+}
+.forward_button_latest{
+	grid-area:forward-button-latest;
+}
+.backward_button_latest{
+	grid-area:backward-button-latest;
+}
+.book_moving_button{
+	width:40px;
+	padding-top:120px;
+	padding-bottom:100px;
+	padding-right:20px;	
+}
+
+.latest_books1{
+    grid-area: latest-books1;
+}
+.latest_books2{
+    grid-area: latest-books2;
+}
+.latest_books3{
+    grid-area: latest-books3;
+}
+.latest_books4{
+    grid-area: latest-books4;
+}
+
+.latest_book_size{
+    width: auto;
+    height: 280px;
+}
+.latest_book_size:hover{
+    box-shadow: 0px 0px 20px dimgray;
+    height: 300px;
+    opacity:0.9;
+    width: auto;
+}
+.authors_label{
+    grid-area: authors-label;
+}
+.authors{
+    grid-area: authors;
+    height: 300px;
+    padding-left: 100px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-areas: 'author1 author2 author2 author-more';
+}
+.author1{
+    grid-area: author1;
+}
+.author2{
+    grid-area: author2;
+}
+.author3{
+    grid-area: author3;
+}
+.author_size{
+    height: 280px;
+    width: 250px;
+    margin-left: 100px;
+}
+.author_image{
+    border-radius: 50%;
+    margin-top: 40px;
+    border: 1px solid black;
+    margin-left: 60px;
+    width: 150px;
+    height: 150px;
+}
+.author_image:hover{
+    opacity: 0.7;
+}
+.author_image:active{
+	opacity:1;
+}
+.author_name{
+    font-size: 20px;
+    margin-left: 55px;
+    margin-top: 20px;
+    position: absolute;
+    text-decoration: none;
+    color: black;
+    font-family:berlinItalic;
+    letter-spacing:1px;
+}
+.author_name:hover{
+    color: #5294e2;
+}
+.author_name:active{
+	color:black;
+}
+.authors .author_more{
+	grid-area:author-more;
+	padding-top:230px;
+	
+}
+.more_style a{
+	color: brown;
+	text-decoration:underline;	
+}
+.more_style a:hover{
+	color:black;
+}
+.more_style a:active{
+	color:brown;
+}
+.all_books_label{
+    grid-area: all-books-label;
+}
+.all_books{
+    grid-area: all-books;
+    height: 300px;
+    display: grid;
+     padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-template-areas: 'book1 book1 book2 book2 book3 book3 book4 book4 book5 book5 allbook-more'
+}
+.book1{
+    grid-area: book1;
+}
+.book1:hover{
+    opacity: 0.8;
+}
+.book2{
+    grid-area: book2;
+}
+.book2:hover{
+    opacity: 0.8;
+}
+.book3{
+    grid-area: book3;
+}
+.book3:hover{
+    opacity: 0.8;
+}
+.book4{
+    grid-area: book4;
+}
+.book4:hover{
+    opacity: 0.8;
+}
+.book5{
+    grid-area: book5;
+}
+.book5:hover{
+    opacity: 0.8;
+}
+.allbook_more{
+	grid-area:allbook-more;
+	padding-top:270px;
+	width:60px;	
+}
+.category_label{
+    grid-area: category-label;
+}
+.category{
+    grid-area: category;
+    height: 70px;
+    text-align: center;
+    background-color:#c3e7f5;
+    display: grid;
+    grid-template-areas: 'politics proceeding novel journal';
+    padding-left: 100px;
+    padding-right: 100px; 
+}
+.politics{
+    grid-area: politics;
+}
+.proceeding{
+    grid-area: proceeding;
+}
+.novel{
+    grid-area: novel;
+}
+.journal{
+    grid-area: journal;
+}
+.category_text{
+    font-size: 30px;
+    text-decoration: none;
+    color: black;
+    text-align: center;
+    height: 70px;
+    padding-top: 15px;
+    font-family: berlinBold;
+    letter-spacing: 2px;
+}
+.category_text:hover{
+    background-color: black;
+    color: white;
+}
+.coming_soon_label{
+    grid-area: coming-soon-label;
+}
+.coming_soon_books{
+    grid-area: coming-soon-books;
+    height: 400px;
+    display: grid;
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    grid-template-areas: 'backward-button-comingsoon comingsoon-book1 comingsoon-book2 comingsoon-book3 comingsoon-book4 comingsoon-book5 forward-button-comingsoon'
+}
+.backward_button_comingsoon{
+    grid-area: backward-button-comingsoon;
+}
+.comingsoon_book1{
+    grid-area: comingsoon-book1;
+}
+.comingsoon_book2{
+    grid-area: comingsoon-book2;
+}
+.comingsoon_book3{
+    grid-area: comingsoon-book3;
+}
+.comingsoon_book4{
+    grid-area: comingsoon-book4;
+}
+.comingsoon_book5{
+    grid-area: comingsoon-book5;
+}
+
+.forward_button_comingsoon{
+    grid-area: forward-button-comingsoon;
+}
+.latest_release_book_size{
+    height: 200px;
+    width: 300px;  
+}
